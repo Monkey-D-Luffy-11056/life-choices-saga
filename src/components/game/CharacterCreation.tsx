@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
-import { Brain, Heart, Dumbbell, Music, Smile, Zap, BookOpen, Mars, Venus } from 'lucide-react';
+import { Brain, Heart, Dumbbell, Music, Smile, Zap, BookOpen, Male, Female } from 'lucide-react';
 
 // Define traits
 const traits = [
@@ -100,7 +100,7 @@ const CharacterCreation = () => {
               <RadioGroup value={gender} onValueChange={(value) => setGender(value as any)} className="flex gap-4">
                 <div className="flex flex-col items-center">
                   <div className={`p-4 rounded-xl ${gender === 'male' ? 'bg-white/30' : 'bg-white/10'} cursor-pointer`} onClick={() => setGender('male')}>
-                    <Mars className="h-10 w-10" />
+                    <Male className="h-10 w-10" />
                   </div>
                   <RadioGroupItem value="male" id="male" className="sr-only" />
                   <Label htmlFor="male" className="mt-2">Masculin</Label>
@@ -108,7 +108,7 @@ const CharacterCreation = () => {
                 
                 <div className="flex flex-col items-center">
                   <div className={`p-4 rounded-xl ${gender === 'female' ? 'bg-white/30' : 'bg-white/10'} cursor-pointer`} onClick={() => setGender('female')}>
-                    <Venus className="h-10 w-10" />
+                    <Female className="h-10 w-10" />
                   </div>
                   <RadioGroupItem value="female" id="female" className="sr-only" />
                   <Label htmlFor="female" className="mt-2">Féminin</Label>
