@@ -7,11 +7,12 @@ interface StatusBarProps {
   icon?: React.ReactNode;
   label?: string;
   showValue?: boolean;
+  className?: string; // Added className prop
 }
 
-const StatusBar: React.FC<StatusBarProps> = ({ value, color, icon, label, showValue = false }) => {
+const StatusBar: React.FC<StatusBarProps> = ({ value, color, icon, label, showValue = false, className }) => {
   return (
-    <div className="w-full">
+    <div className={`w-full ${className || ''}`}>
       {(label || icon) && (
         <div className="flex items-center mb-1">
           {icon && <span className="mr-1.5">{icon}</span>}
